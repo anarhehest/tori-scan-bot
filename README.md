@@ -1,22 +1,20 @@
 # ToriScan
-Live version is available at: https://t.me/ToriScan_bot
 
-ToriScan is the bot that helps you stay updated with new listings on Tori.fi. Get instant (almost) notifications on Telegram whenever new items matching your search criteria are posted.
+Live-версия доступна здеcь: https://t.me/ToriScan_bot
 
-Please note: That's a pet non-profit project. ToriScan and/or it's developer is not affiliated with tori.fi or Schibsted Media Group in any way.
+ToriScan — это бот, который поможет вам быть в курсе новых объявлений на Tori.fi. Получайте мгновенные (почти) уведомления в Telegram, когда публикуются новые товары, соответствующие вашим критериям поиска.
 
-# How to launch
-1. Install the dependencies:
-(you need to have Python installed)
-``` pip install --upgrade -r requirements.txt ```
-2. Obtain the token for your own bot:
-You can do it using https://t.me/BotFather. It will guide you throught the process.
-3. Put your token to bot.py:
-[Here](https://github.com/arealibusadrealiora/tori-scan-bot/blob/main/bot.py#L22) you should set up the token you've obtained in the previous step ("token" variable). You have a couple of options on how to do it:
-    - Set it as a environment variable. (Default option. For Windows, you can look for instructions [here](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-powershell-1.0/ff730964(v=technet.10)?redirectedfrom=MSDN), for Linux use echo ``` "TOKEN=your_token" > .env ```), if you're using Docker, you can provide it when you're starting the container: ``` docker run -d --name my-bot-container -e TOKEN=your_token my-bot-image ```;
-    - Put it as a token.txt in the same folder with the bot.py;
-    - Hard-code it (``` token = your_token ```).
-4. Launch:
-``` python bot.py ``` 
+Обратите внимание: это некоммерческий пет-проект. ToriScan и/или его разработчик никак не связаны с tori.fi или Schibsted Media Group.
 
-Alternatively, if you're familiar with Docker, you can simply use the Dockerfile from this repo.
+
+## Зависимости
+* **Python**
+* **Docker**
+
+## Шаги (Linux/MacOS)
+
+1. Сохраните в .env-файл токена Вашего бота (создать его можно у [Отца](https://t.me/BotFather)):
+```"TOKEN=ваш_токен" > .env``` 
+
+2. Запустите Shell-скрипт:
+``` ./launch.sh ``` 
